@@ -8,9 +8,9 @@
 
 ## Abstract Summary
 
-![Retail-Supply-Chain-Analytics](Supply%20Chain.png)
-
-
+![Retail-Supply-Chain-Analytics](Deliv.png)
+![Retail-Supply-Chain-Analytics](Pro.png)
+![Retail-Supply-Chain-Analytics](Return%20Analysis.png)
 
 ## Introduction
 
@@ -118,7 +118,6 @@ The response to each problem was not a separate dashboard — it was a single co
 ### The Efficiency Score — methodology
 
 The centrepiece of the scorecard page is a custom Efficiency Score, built to rank supply chain performance at the state and city level without relying on any single metric. The logic mirrors how a consulting engagement would define operational health: not just speed, not just profit, but the balance between all three.
-![Retail-Supply-Chain-Analytics](Supply%20Chain.png)
 
 | Determinant Factor | Weight | Threshold |
 |---|---|---|
@@ -128,7 +127,9 @@ The centrepiece of the scorecard page is a custom Efficiency Score, built to ran
 
 A location scores 100% when it meets or beats all three thresholds simultaneously. Anything below signals where operational investment is most needed before the business considers expanding into new markets.
 
----
+![Retail-Supply-Chain-Analytics](Retail_Supply_Chain%20Healthscore.png)
+
+
 
 ### DAX engineering highlights
 
@@ -137,10 +138,7 @@ All measures were built with defensive coding conventions — ISBLANK checks to 
 ```dax
 -- Delivery days calculation
 Delivery Days =
-VAR _OrderDate = MIN(Orders[Order Date])
-VAR _ShipDate  = MIN(Orders[Ship Date])
-RETURN
-    IF(ISBLANK(_ShipDate), BLANK(), DATEDIFF(_OrderDate, _ShipDate, DAY))
+Delivery Days = DATEDIFF(Facts_Table[Order Date], Facts_Table[Ship Date],DAY)
 
 -- SLA classification
 SLA Status =
@@ -156,7 +154,6 @@ RETURN
     )
 ```
 
----
 
 ### What this system makes possible
 
@@ -164,13 +161,12 @@ Individually, each page answers a question. Together, they form a closed diagnos
 
 > This is not a dashboard that shows you what happened. It is a system that tells you why — and where to act next.
 
----
 
 ## Key Insights
 
 The data surfaced five findings that move beyond summary statistics — each one actionable, each one pointing to a specific part of the operation.
 
----
+
 
 **Delivery is broken at the mode level, not just in aggregate.**
 Standard Class accounts for 918 SLA breaches — orders that took more than 10 business days despite being booked on a tier that promises delivery within that window. This is not a volume problem; it is a contract and routing problem. Same Day shipping, by contrast, shows only 7 breaches across the entire dataset.
@@ -187,13 +183,11 @@ Multiple states achieve a 100% efficiency score — meeting all three thresholds
 **One salesperson is carrying disproportionate return risk.**
 Anna Andreadi's 11.73% return rate across 1,611 orders is not a rounding error — it is a signal. Chuck Magee (3.14%) and Kelly Williams (3.32%) operate at roughly a quarter of that rate. Without salesperson-level visibility, this exposure would have remained hidden inside the aggregate 5.91% figure.
 
----
 
 ## Recommendations
 
 Five actions, prioritised by impact and feasibility.
 
----
 
 **01 — Audit Standard Class logistics contracts**
 918 SLA breaches on a single ship mode is not acceptable at scale. The business should review carrier performance data, renegotiate SLA terms, or route Standard Class orders through alternative fulfilment channels in high-breach regions. This is the single highest-volume failure in the dataset.
@@ -210,7 +204,7 @@ Before expanding into new markets or increasing volume in existing ones, states 
 **05 — Monitor Technology returns as a leading indicator**
 Technology's combination of highest profit and highest return rate (7.97%) makes it the most important category to watch. A return rate monitoring cadence — monthly at minimum — should be established for this category specifically, with a defined threshold that triggers review before margin impact becomes material.
 
----
+
 
 ## Conclusion
 
@@ -224,4 +218,4 @@ For now, the system answers the three questions it was built to answer. With cla
 
 > Built with Power BI · Dataset by FP20 Analytics · Connect with me on [LinkedIn](https://www.linkedin.com/in/osinusi-ayodeji)
 
----
+
