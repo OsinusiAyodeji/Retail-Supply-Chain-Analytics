@@ -8,7 +8,7 @@
 
 ## Abstract Summary
 
-![Dashboard Preview](Supply_Chain.png)
+![Retail-Supply-Chain-Analytics](Supply%20Chain.png)
 
 
 
@@ -44,7 +44,7 @@ Examines return patterns by product category, ship mode, and month. Crucially, i
 
 The goal was not to build a reporting tool. It was to build something that forces a decision — one that a logistics manager, a sales director, or a CFO could open on a Monday morning and immediately know where to focus.
 
----
+
 
 ## Problem Statement
 
@@ -52,7 +52,7 @@ Running a retail supply chain without the right diagnostic lens is expensive. No
 
 This business had four visibility gaps that no standard report was addressing:
 
----
+
 
 ### Problem 01 — No accountability for late deliveries
 
@@ -60,7 +60,6 @@ This business had four visibility gaps that no standard report was addressing:
 
 > 1,506 late deliveries — Office Supplies alone accounted for 1,122
 
----
 
 ### Problem 02 — Profit leakage with no clear source
 
@@ -68,7 +67,7 @@ The business recorded $156.13K in revenue loss against $2.30M in total revenue �
 
 > $156.13K revenue loss — source unattributed across categories and regions
 
----
+
 
 ### Problem 03 — Returns treated as noise, not signal
 
@@ -76,7 +75,7 @@ A 5.91% return rate and $180.50K in revenue lost to returns were sitting in the 
 
 > Anna Andreadi: 11.73% return rate — more than 3x the next salesperson
 
----
+
 
 ### Problem 04 — No standard for "good" supply chain performance
 
@@ -84,17 +83,16 @@ Without a composite benchmark, every region and city was evaluated in isolation.
 
 > No efficiency benchmark — states like Arizona and California scoring 70% went undetected
 
----
 
 These four gaps meant the business was making operational decisions — routing, stocking, staffing — without a shared definition of what good performance actually looked like. This project was built to provide that definition.
 
----
+
 
 ## Solution
 
 The response to each problem was not a separate dashboard — it was a single connected system, built across three report pages, with a shared data model and a set of custom DAX measures designed to make every metric traceable back to a business decision.
 
----
+
 
 ### Report architecture
 
@@ -116,11 +114,11 @@ The response to each problem was not a separate dashboard — it was a single co
 - Correlation scatter plot between ship mode and return rate — testing the hypothesis that faster shipping reduces return likelihood
 - Salesperson accountability table: total orders, total returns, and return rate per rep — making individual exposure visible and comparable
 
----
 
 ### The Efficiency Score — methodology
 
 The centrepiece of the scorecard page is a custom Efficiency Score, built to rank supply chain performance at the state and city level without relying on any single metric. The logic mirrors how a consulting engagement would define operational health: not just speed, not just profit, but the balance between all three.
+![Retail-Supply-Chain-Analytics](Supply%20Chain.png)
 
 | Determinant Factor | Weight | Threshold |
 |---|---|---|
