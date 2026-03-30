@@ -6,11 +6,11 @@
 ![Category](https://img.shields.io/badge/Category-Supply%20Chain-534AB7?style=flat-square)
 ![Pages](https://img.shields.io/badge/Report%20Pages-3-BA7517?style=flat-square)
 
----
+
 
 ![Dashboard Preview](Supply_Chain.png)
 
----
+
 
 ## Introduction
 
