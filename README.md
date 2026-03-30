@@ -221,6 +221,6 @@ The technical foundation — **DAX**-driven SLA logic, defensive measure constru
 
 For now, the system answers the three questions it was built to answer. With clarity, and without ambiguity.
 
-> Built with **Power BI** · Dataset by **FP20 Analytics** · Connect with me on [LinkedIn](https://www.linkedin.com/in/osinusi-ayodeji)
+> Built with **Power BI** · Dataset by **FP20 Analytics** · Connect with me on [LinkedIn](https://www.linkedin.com/in/ayodejiokiki)
 
 
